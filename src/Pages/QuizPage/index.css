@@ -1,0 +1,41 @@
+.board{
+    background-color: yellow;
+    width: 50%;
+    border-radius: 15px;
+}
+.questions{
+    margin: 0 auto;
+    background-color: black;
+    width: 90%;
+    border-radius: 15px;
+}
+.alternative-button{
+    color: white;
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    border: none;
+    background-color: black;
+    border-radius: 15px;
+}
+.alternative-button:hover{
+  opacity: 98%;
+}
+.question-number{
+  color: black;
+  text-align: end; 
+  padding: 0.5rem;
+}
+.correct{
+  background-color: rgb(25, 119, 25);
+}
+.wrong{
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+@media (max-width: 800px)
+{
+  .board{
+    width: 90%;
+  }
+}

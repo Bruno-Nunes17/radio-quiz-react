@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { AppContext } from "./context/AppContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const initialState = {
+  type: null,
+  category: null,
+  questions: [],
+  currentQuestion: 0,
+  totalQuestion:null,
+  score: 0,
+  answerSelected: false,
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppContext initialState={initialState}>
+      <App />
+    </AppContext>
   </React.StrictMode>
 );
 
